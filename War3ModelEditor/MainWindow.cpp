@@ -1201,8 +1201,8 @@ BOOL MAIN_WINDOW::CalculateExtents()
 	EXTENT Extent;
 	EXTENT TempExtent;
 
-	//Max = std::numeric_limits<FLOAT>::max();
-	Min = -Max;
+	Max = (std::numeric_limits<FLOAT>::max)();
+	Min = (std::numeric_limits<FLOAT>::min)();
 
 	Extent.Radius = 0.0f;
 	Extent.Min = D3DXVECTOR3(Max, Max, Max);
