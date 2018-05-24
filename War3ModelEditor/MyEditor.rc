@@ -1,0 +1,247 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+_War3ModelEditorIcon    ICON    DISCARDABLE     "ProgramIcons\\_War3ModelEditor.ico"
+IconUnknown             ICON    DISCARDABLE     "ProgramIcons\\unknown.ico"
+IconArchive             ICON    DISCARDABLE     "ProgramIcons\\archive.ico"
+IconAttachment          ICON    DISCARDABLE     "ProgramIcons\\attachment.ico"
+IconBone                ICON    DISCARDABLE     "ProgramIcons\\bone.ico"
+IconCollisionShape      ICON    DISCARDABLE     "ProgramIcons\\collisionshape.ico"
+IconEventObject         ICON    DISCARDABLE     "ProgramIcons\\eventobject.ico"
+IconFolder              ICON    DISCARDABLE     "ProgramIcons\\folder.ico"
+IconHelper              ICON    DISCARDABLE     "ProgramIcons\\helper.ico"
+IconImage               ICON    DISCARDABLE     "ProgramIcons\\image.ico"
+IconLight               ICON    DISCARDABLE     "ProgramIcons\\light.ico"
+IconModel               ICON    DISCARDABLE     "ProgramIcons\\model.ico"
+IconParticleEmitter     ICON    DISCARDABLE     "ProgramIcons\\particleemitter.ico"
+IconParticleEmitter2    ICON    DISCARDABLE     "ProgramIcons\\particleemitter2.ico"
+IconRibbonEmitter       ICON    DISCARDABLE     "ProgramIcons\\ribbonemitter.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+BitmapU12               BITMAP  DISCARDABLE     "TeamColors\\U12.bmp"
+BitmapC00               BITMAP  DISCARDABLE     "TeamColors\\C00.bmp"
+BitmapC01               BITMAP  DISCARDABLE     "TeamColors\\C01.bmp"
+BitmapC02               BITMAP  DISCARDABLE     "TeamColors\\C02.bmp"
+BitmapC03               BITMAP  DISCARDABLE     "TeamColors\\C03.bmp"
+BitmapC04               BITMAP  DISCARDABLE     "TeamColors\\C04.bmp"
+BitmapC05               BITMAP  DISCARDABLE     "TeamColors\\C05.bmp"
+BitmapC06               BITMAP  DISCARDABLE     "TeamColors\\C06.bmp"
+BitmapC07               BITMAP  DISCARDABLE     "TeamColors\\C07.bmp"
+BitmapC08               BITMAP  DISCARDABLE     "TeamColors\\C08.bmp"
+BitmapC09               BITMAP  DISCARDABLE     "TeamColors\\C09.bmp"
+BitmapC10               BITMAP  DISCARDABLE     "TeamColors\\C10.bmp"
+BitmapC11               BITMAP  DISCARDABLE     "TeamColors\\C11.bmp"
+BitmapC12               BITMAP  DISCARDABLE     "TeamColors\\C12.bmp"
+BitmapU00               BITMAP  DISCARDABLE     "TeamColors\\U00.bmp"
+BitmapU01               BITMAP  DISCARDABLE     "TeamColors\\U01.bmp"
+BitmapU02               BITMAP  DISCARDABLE     "TeamColors\\U02.bmp"
+BitmapU03               BITMAP  DISCARDABLE     "TeamColors\\U03.bmp"
+BitmapU04               BITMAP  DISCARDABLE     "TeamColors\\U04.bmp"
+BitmapU05               BITMAP  DISCARDABLE     "TeamColors\\U05.bmp"
+BitmapU06               BITMAP  DISCARDABLE     "TeamColors\\U06.bmp"
+BitmapU07               BITMAP  DISCARDABLE     "TeamColors\\U07.bmp"
+BitmapU08               BITMAP  DISCARDABLE     "TeamColors\\U08.bmp"
+BitmapU09               BITMAP  DISCARDABLE     "TeamColors\\U09.bmp"
+BitmapU10               BITMAP  DISCARDABLE     "TeamColors\\U10.bmp"
+BitmapU11               BITMAP  DISCARDABLE     "TeamColors\\U11.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MainMenu MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New",                         MainFileNew
+        MENUITEM SEPARATOR
+        MENUITEM "Open",                        MainFileOpen
+        MENUITEM "Save",                        MainFileSave
+        MENUITEM "Save as",                     MainFileSaveAs
+        MENUITEM "Close",                       MainFileClose
+        MENUITEM SEPARATOR
+        MENUITEM "Import",                      MainFileImport
+        MENUITEM "Exit",                        MainFileExit
+    END
+    POPUP "Recent Files"
+    BEGIN
+        MENUITEM "Clear",                       MainHistoryClear
+        MENUITEM SEPARATOR
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Reg Ext",                     MainEditRegisterExtentions
+        MENUITEM SEPARATOR
+        MENUITEM "Calc Ext",                    MainEditCalculateExtents
+        MENUITEM "Prop",                        MainEditProperties
+        MENUITEM "Mdl Prop",                    MainEditModelProperties
+        MENUITEM "Mdl Info",                    MainEditModelInfo
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "800*600",                     MainViewResize
+        MENUITEM SEPARATOR
+        MENUITEM "Rst Camera",                  MainViewResetCamera
+    END
+    POPUP "Team Color"
+    BEGIN
+        MENUITEM "Red",                         MainTeamColorRed
+        MENUITEM "Blue",                        MainTeamColorBlue
+        MENUITEM "Teal",                        MainTeamColorTeal
+        MENUITEM "Purple",                      MainTeamColorPurple
+        MENUITEM "Yellow",                      MainTeamColorYellow
+        MENUITEM "Orange",                      MainTeamColorOrange
+        MENUITEM "Green",                       MainTeamColorGreen
+        MENUITEM "Pink",                        MainTeamColorPink
+        MENUITEM "Gray",                        MainTeamColorGray
+        MENUITEM "LightBlue",                   MainTeamColorLightBlue
+        MENUITEM "Drk Green",                   MainTeamColorDarkGreen
+        MENUITEM "Brown",                       MainTeamColorBrown
+        MENUITEM SEPARATOR
+        MENUITEM "Black",                       MainTeamColorBlack
+    END
+    POPUP "Windows"
+    BEGIN
+        MENUITEM "Mdl Editor",                  MainWindowsModelEditor
+        MENUITEM "Ani Ctrl",                    MainWindowsAnimationController
+
+        MENUITEM SEPARATOR
+        MENUITEM "Node Manger",                 MainWindowsNodeManager
+        MENUITEM "Carma manger",                MainWindowsCameraManager
+        MENUITEM "Geosets man",                 MainWindowsGeosetManager
+        MENUITEM "GeosetAniMang",               MainWindowsGeosetAnimationManager
+
+        MENUITEM "Text Mang",                   MainWindowsTextureManager
+        MENUITEM "TexAniMan",                   MainWindowsTextureAnimationManager
+
+        MENUITEM "Mat Mang",                    MainWindowsMaterialManager
+        MENUITEM "Seq mang",                    MainWindowsSequenceManager
+        MENUITEM "GlobalSeqman",                MainWindowsGlobalSequenceManager
+
+        MENUITEM SEPARATOR
+        MENUITEM "MpqBro",                      MainWindowsMpqBrowser
+    END
+    POPUP "Extra"
+    BEGIN
+        MENUITEM "LadScreenCreat",              MainExtrasLoadingScreen
+        MENUITEM "ColorText",                   MainExtrasColoredText
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Help",                        MainHelpHelp
+        MENUITEM "about",                       MainHelpAbout
+    END
+END
+
+MpqMenu MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Open",                        MpqFileOpen
+        MENUITEM "close",                       MpqFileClose
+        MENUITEM SEPARATOR
+        MENUITEM "war3",                        MpqFileWar3Mpq
+        MENUITEM "war3x",                       MpqFileWar3xMpq
+        MENUITEM "war3local",                   MpqFileWar3xLocalMpq
+        MENUITEM "war3xpatch",                  MpqFileWar3PatchMpq
+    END
+    POPUP "Filter"
+    BEGIN
+        MENUITEM "other",                       MpqFiltersOther, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "all",                         MpqFiltersAll
+        MENUITEM "none",                        MpqFiltersNone
+    END
+END
+
+LayerMenu2 MENU DISCARDABLE 
+BEGIN
+    MENUITEM "gdfg",                        65535
+END
+
+ManagerMenu MENU DISCARDABLE 
+BEGIN
+    MENUITEM "dsf",                         65535
+END
+
+LayerMenu MENU DISCARDABLE 
+BEGIN
+    POPUP "fgdfg"
+    BEGIN
+        MENUITEM "LayerFileCreateNew",          LayerFileCreateNew
+    END
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

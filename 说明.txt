@@ -1,0 +1,4 @@
+Common.cpp(307):	Directory = "F:\\Warcraft";
+Register.cpp(351):	WarcraftDirectory ="F:\\Warcraft";
+
+以上两个文件硬编码了路径，需要修改

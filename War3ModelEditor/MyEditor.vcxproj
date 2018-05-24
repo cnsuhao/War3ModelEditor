@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>War3ModelEditor</ProjectName>
+    <ProjectGuid>{B1CE408F-DD84-4226-9D70-2BF7B47DF924}</ProjectGuid>
+    <RootNamespace>MyEditor</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/MyEditor.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/MyEditor.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalIncludeDirectories>H:\LWM\Code\DXSDK\DirectX9\Include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;d3dx9.lib;d3d9.lib;dinput8.lib;dxguid.lib;winmm.lib;comctl32.lib;StormLibStatic.lib;libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Release/MyEditor.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ProgramDatabaseFile>.\Release/MyEditor.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/MyEditor.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/MyEditor.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>H:\LWM\Code\DXSDK\DirectX9\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/MyEditor.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;d3dx9.lib;d3d9.lib;dinput8.lib;dxguid.lib;winmm.lib;comctl32.lib;StormLibStatic.lib;libjpeg.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Bin/MyEditor.exe</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>H:\LWM\Code\DXSDK\DirectX9\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/MyEditor.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/MyEditor.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AnimationWindow.cpp" />
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CameraManagerWindow.cpp" />
+    <ClCompile Include="Common.cpp" />
+    <ClCompile Include="ConstantTable.cpp" />
+    <ClCompile Include="DataInStream.cpp" />
+    <ClCompile Include="DataOutStream.cpp" />
+    <ClCompile Include="Error.cpp" />
+    <ClCompile Include="EventObjectManagerWindow.cpp" />
+    <ClCompile Include="FileLoader.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FlashingGeoset.cpp" />
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="GeosetAnimationManagerWindow.cpp" />
+    <ClCompile Include="GeosetManagerWindow.cpp" />
+    <ClCompile Include="GlobalSequenceManagerWindow.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="GraphicsWindow.cpp" />
+    <ClCompile Include="Icon.cpp" />
+    <ClCompile Include="Interpolator.cpp" />
+    <ClCompile Include="Jpeg.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="ManagerWindow.cpp" />
+    <ClCompile Include="MaterialManagerWindow.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ModelAttachment.cpp" />
+    <ClCompile Include="ModelBase.cpp" />
+    <ClCompile Include="ModelBone.cpp" />
+    <ClCompile Include="ModelBuilder.cpp" />
+    <ClCompile Include="ModelCamera.cpp" />
+    <ClCompile Include="ModelCollisionShape.cpp" />
+    <ClCompile Include="ModelEventObject.cpp" />
+    <ClCompile Include="ModelGeoset.cpp" />
+    <ClCompile Include="ModelGeosetAnimation.cpp" />
+    <ClCompile Include="ModelGeosetFace.cpp" />
+    <ClCompile Include="ModelGeosetGroup.cpp" />
+    <ClCompile Include="ModelGeosetVertex.cpp" />
+    <ClCompile Include="ModelGlobalSequence.cpp" />
+    <ClCompile Include="ModelHelper.cpp" />
+    <ClCompile Include="ModelHistory.cpp" />
+    <ClCompile Include="ModelImporter.cpp" />
+    <ClCompile Include="ModelLight.cpp" />
+    <ClCompile Include="ModelLoader.cpp" />
+    <ClCompile Include="ModelLoaderMdl.cpp" />
+    <ClCompile Include="ModelLoaderMdx.cpp" />
+    <ClCompile Include="ModelMaterial.cpp" />
+    <ClCompile Include="ModelMaterialLayer.cpp" />
+    <ClCompile Include="ModelModel.cpp" />
+    <ClCompile Include="ModelParticleEmitter.cpp" />
+    <ClCompile Include="ModelParticleEmitter2.cpp" />
+    <ClCompile Include="ModelRibbonEmitter.cpp" />
+    <ClCompile Include="ModelSequence.cpp" />
+    <ClCompile Include="ModelTexture.cpp" />
+    <ClCompile Include="ModelTextureAnimation.cpp" />
+    <ClCompile Include="ModelWindow.cpp" />
+    <ClCompile Include="Mouse.cpp" />
+    <ClCompile Include="Mpq.cpp" />
+    <ClCompile Include="MpqWindow.cpp" />
+    <ClCompile Include="MyEditor.cpp" />
+    <ClCompile Include="NodeIcon.cpp" />
+    <ClCompile Include="NodeManagerWindow.cpp" />
+    <ClCompile Include="ObjectIdManager.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="ParticleManager.cpp" />
+    <ClCompile Include="PixelShader.cpp" />
+    <ClCompile Include="Properties.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="Register.cpp" />
+    <ClCompile Include="ResourceLoader.cpp" />
+    <ClCompile Include="Ribbon.cpp" />
+    <ClCompile Include="RibbonManager.cpp" />
+    <ClCompile Include="SequenceManagerWindow.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TeamColor.cpp" />
+    <ClCompile Include="TemporaryFile.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureAnimationManagerWindow.cpp" />
+    <ClCompile Include="TextureLoader.cpp" />
+    <ClCompile Include="TextureLoaderBasic.cpp" />
+    <ClCompile Include="TextureLoaderBlp.cpp" />
+    <ClCompile Include="TextureLoaderPcx.cpp" />
+    <ClCompile Include="TextureManager.cpp" />
+    <ClCompile Include="TextureManagerWindow.cpp" />
+    <ClCompile Include="TextureWindow.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="TokenInStream.cpp" />
+    <ClCompile Include="TokenOutStream.cpp" />
+    <ClCompile Include="VertexShader.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="WindowAttachmentDialog.cpp" />
+    <ClCompile Include="WindowBoneDialog.cpp" />
+    <ClCompile Include="WindowButton.cpp" />
+    <ClCompile Include="WindowCameraDialog.cpp" />
+    <ClCompile Include="WindowCollisionShapeDialog.cpp" />
+    <ClCompile Include="WindowColoredTextDialog.cpp" />
+    <ClCompile Include="WindowCombobox.cpp" />
+    <ClCompile Include="WindowDialog.cpp" />
+    <ClCompile Include="WindowEdit.cpp" />
+    <ClCompile Include="WindowEventObjectDialog.cpp" />
+    <ClCompile Include="WindowExtentDialog.cpp" />
+    <ClCompile Include="WindowExtentsDialog.cpp" />
+    <ClCompile Include="WindowFaceDialog.cpp" />
+    <ClCompile Include="WindowFacesDialog.cpp" />
+    <ClCompile Include="WindowFileDialog.cpp" />
+    <ClCompile Include="WindowFrame.cpp" />
+    <ClCompile Include="WindowGeosetAnimationDialog.cpp" />
+    <ClCompile Include="WindowGeosetDialog.cpp" />
+    <ClCompile Include="WindowGlobalSequenceDialog.cpp" />
+    <ClCompile Include="WindowGroupDialog.cpp" />
+    <ClCompile Include="WindowGroupsDialog.cpp" />
+    <ClCompile Include="WindowHelperDialog.cpp" />
+    <ClCompile Include="WindowImportGeosetDialog.cpp" />
+    <ClCompile Include="WindowInterpolatorDialog.cpp" />
+    <ClCompile Include="WindowLightDialog.cpp" />
+    <ClCompile Include="WindowListbox.cpp" />
+    <ClCompile Include="WindowLoadingScreenDialog.cpp" />
+    <ClCompile Include="WindowMaterialDialog.cpp" />
+    <ClCompile Include="WindowMaterialLayerDialog.cpp" />
+    <ClCompile Include="WindowModelInfoDialog.cpp" />
+    <ClCompile Include="WindowModelPropertiesDialog.cpp" />
+    <ClCompile Include="WindowNodeDialog.cpp" />
+    <ClCompile Include="WindowParticleEmitter2Dialog.cpp" />
+    <ClCompile Include="WindowParticleEmitterDialog.cpp" />
+    <ClCompile Include="WindowPropertiesDialog.cpp" />
+    <ClCompile Include="WindowQualityDialog.cpp" />
+    <ClCompile Include="WindowRegisterDialog.cpp" />
+    <ClCompile Include="WindowRibbonEmitterDialog.cpp" />
+    <ClCompile Include="WindowRotateDialog.cpp" />
+    <ClCompile Include="WindowScaleDialog.cpp" />
+    <ClCompile Include="WindowSequenceDialog.cpp" />
+    <ClCompile Include="WindowTextureAnimationDialog.cpp" />
+    <ClCompile Include="WindowTextureDialog.cpp" />
+    <ClCompile Include="WindowTranslateDialog.cpp" />
+    <ClCompile Include="WindowTreeview.cpp" />
+    <ClCompile Include="WindowVertexDialog.cpp" />
+    <ClCompile Include="WindowVerticesDialog.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MyEditor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AnimationWindow.h" />
+    <ClInclude Include="Buffer.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="CameraManagerWindow.h" />
+    <ClInclude Include="Common.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="ConstantTable.h" />
+    <ClInclude Include="Container.h" />
+    <ClInclude Include="DataInStream.h" />
+    <ClInclude Include="DataOutStream.h" />
+    <ClInclude Include="Definitions.h" />
+    <ClInclude Include="Error.h" />
+    <ClInclude Include="EventObjectManagerWindow.h" />
+    <ClInclude Include="Extent.h" />
+    <ClInclude Include="FileLoader.h" />
+    <ClInclude Include="Filter.h" />
+    <ClInclude Include="FlashingGeoset.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="GeosetAnimationManagerWindow.h" />
+    <ClInclude Include="GeosetManagerWindow.h" />
+    <ClInclude Include="GlobalSequenceManagerWindow.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GraphicsInfo.h" />
+    <ClInclude Include="GraphicsWindow.h" />
+    <ClInclude Include="Icon.h" />
+    <ClInclude Include="Interpolator.h" />
+    <ClInclude Include="jconfig.h" />
+    <ClInclude Include="jmorecfg.h" />
+    <ClInclude Include="Jpeg.h" />
+    <ClInclude Include="jpeglib.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="MainWindow.h" />
+    <ClInclude Include="ManagerWindow.h" />
+    <ClInclude Include="MaterialManagerWindow.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Misc.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="ModelAttachment.h" />
+    <ClInclude Include="ModelBase.h" />
+    <ClInclude Include="ModelBone.h" />
+    <ClInclude Include="ModelBuilder.h" />
+    <ClInclude Include="ModelCamera.h" />
+    <ClInclude Include="ModelCollisionShape.h" />
+    <ClInclude Include="ModelEventObject.h" />
+    <ClInclude Include="ModelGeoset.h" />
+    <ClInclude Include="ModelGeosetAnimation.h" />
+    <ClInclude Include="ModelGeosetFace.h" />
+    <ClInclude Include="ModelGeosetGroup.h" />
+    <ClInclude Include="ModelGeosetVertex.h" />
+    <ClInclude Include="ModelGlobalSequence.h" />
+    <ClInclude Include="ModelHelper.h" />
+    <ClInclude Include="ModelHistory.h" />
+    <ClInclude Include="ModelImporter.h" />
+    <ClInclude Include="ModelLight.h" />
+    <ClInclude Include="ModelLoader.h" />
+    <ClInclude Include="ModelLoaderMdl.h" />
+    <ClInclude Include="ModelLoaderMdx.h" />
+    <ClInclude Include="ModelMaterial.h" />
+    <ClInclude Include="ModelMaterialLayer.h" />
+    <ClInclude Include="ModelModel.h" />
+    <ClInclude Include="ModelParticleEmitter.h" />
+    <ClInclude Include="ModelParticleEmitter2.h" />
+    <ClInclude Include="ModelRibbonEmitter.h" />
+    <ClInclude Include="ModelSequence.h" />
+    <ClInclude Include="ModelTexture.h" />
+    <ClInclude Include="ModelTextureAnimation.h" />
+    <ClInclude Include="ModelWindow.h" />
+    <ClInclude Include="Mouse.h" />
+    <ClInclude Include="Mpq.h" />
+    <ClInclude Include="MpqWindow.h" />
+    <ClInclude Include="NodeIcon.h" />
+    <ClInclude Include="NodeManagerWindow.h" />
+    <ClInclude Include="ObjectIdManager.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="ParticleManager.h" />
+    <ClInclude Include="PixelShader.h" />
+    <ClInclude Include="PreIncludes.h" />
+    <ClInclude Include="Properties.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="Reference.h" />
+    <ClInclude Include="ReferenceObject.h" />
+    <ClInclude Include="Register.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourceLoader.h" />
+    <ClInclude Include="Ribbon.h" />
+    <ClInclude Include="RibbonManager.h" />
+    <ClInclude Include="SequenceManagerWindow.h" />
+    <ClInclude Include="SequenceTime.h" />
+    <ClInclude Include="SimpleContainer.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="StormLib.h" />
+    <ClInclude Include="StormLibStatic.h" />
+    <ClInclude Include="TeamColor.h" />
+    <ClInclude Include="TemporaryFile.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureAnimationManagerWindow.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="TextureLoaderBasic.h" />
+    <ClInclude Include="TextureLoaderBlp.h" />
+    <ClInclude Include="TextureLoaderPcx.h" />
+    <ClInclude Include="TextureManager.h" />
+    <ClInclude Include="TextureManagerWindow.h" />
+    <ClInclude Include="TextureWindow.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TokenInStream.h" />
+    <ClInclude Include="TokenOutStream.h" />
+    <ClInclude Include="Vertex.h" />
+    <ClInclude Include="VertexShader.h" />
+    <ClInclude Include="War3ModelImporter\War3ModelImporter.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="WindowAttachmentDialog.h" />
+    <ClInclude Include="WindowBoneDialog.h" />
+    <ClInclude Include="WindowButton.h" />
+    <ClInclude Include="WindowCameraDialog.h" />
+    <ClInclude Include="WindowCollisionShapeDialog.h" />
+    <ClInclude Include="WindowColoredTextDialog.h" />
+    <ClInclude Include="WindowCombobox.h" />
+    <ClInclude Include="WindowDialog.h" />
+    <ClInclude Include="WindowEdit.h" />
+    <ClInclude Include="WindowEventObjectDialog.h" />
+    <ClInclude Include="WindowExtentDialog.h" />
+    <ClInclude Include="WindowExtentsDialog.h" />
+    <ClInclude Include="WindowFaceDialog.h" />
+    <ClInclude Include="WindowFacesDialog.h" />
+    <ClInclude Include="WindowFileDialog.h" />
+    <ClInclude Include="WindowFrame.h" />
+    <ClInclude Include="WindowGeosetAnimationDialog.h" />
+    <ClInclude Include="WindowGeosetDialog.h" />
+    <ClInclude Include="WindowGlobalSequenceDialog.h" />
+    <ClInclude Include="WindowGroupDialog.h" />
+    <ClInclude Include="WindowGroupsDialog.h" />
+    <ClInclude Include="WindowHelperDialog.h" />
+    <ClInclude Include="WindowImportGeosetDialog.h" />
+    <ClInclude Include="WindowInterpolatorDialog.h" />
+    <ClInclude Include="WindowLightDialog.h" />
+    <ClInclude Include="WindowListbox.h" />
+    <ClInclude Include="WindowLoadingScreenDialog.h" />
+    <ClInclude Include="WindowMaterialDialog.h" />
+    <ClInclude Include="WindowMaterialLayerDialog.h" />
+    <ClInclude Include="WindowModelInfoDialog.h" />
+    <ClInclude Include="WindowModelPropertiesDialog.h" />
+    <ClInclude Include="WindowNodeDialog.h" />
+    <ClInclude Include="WindowParticleEmitter2Dialog.h" />
+    <ClInclude Include="WindowParticleEmitterDialog.h" />
+    <ClInclude Include="WindowPropertiesDialog.h" />
+    <ClInclude Include="WindowQualityDialog.h" />
+    <ClInclude Include="WindowRegisterDialog.h" />
+    <ClInclude Include="WindowRibbonEmitterDialog.h" />
+    <ClInclude Include="WindowRotateDialog.h" />
+    <ClInclude Include="WindowScaleDialog.h" />
+    <ClInclude Include="WindowSequenceDialog.h" />
+    <ClInclude Include="WindowTextureAnimationDialog.h" />
+    <ClInclude Include="WindowTextureDialog.h" />
+    <ClInclude Include="WindowTranslateDialog.h" />
+    <ClInclude Include="WindowTreeview.h" />
+    <ClInclude Include="WindowVertexDialog.h" />
+    <ClInclude Include="WindowVerticesDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="ProgramIcons\archive.ico" />
+    <Image Include="ProgramIcons\attachment.ico" />
+    <Image Include="ProgramIcons\bone.ico" />
+    <Image Include="ProgramIcons\collisionshape.ico" />
+    <Image Include="ProgramIcons\eventobject.ico" />
+    <Image Include="ProgramIcons\folder.ico" />
+    <Image Include="ProgramIcons\helper.ico" />
+    <Image Include="ProgramIcons\image.ico" />
+    <Image Include="ProgramIcons\light.ico" />
+    <Image Include="ProgramIcons\model.ico" />
+    <Image Include="ProgramIcons\particleemitter.ico" />
+    <Image Include="ProgramIcons\particleemitter2.ico" />
+    <Image Include="ProgramIcons\ribbonemitter.ico" />
+    <Image Include="ProgramIcons\unknown.ico" />
+    <Image Include="ProgramIcons\_War3ModelEditor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
